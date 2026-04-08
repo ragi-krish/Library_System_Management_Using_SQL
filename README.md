@@ -6,12 +6,12 @@ The system consists of the following relational tables:
 
 * Branch: Information about library branches and their managers.
 
-Employee: Staff details associated with specific branches.
+* Employee: Staff details associated with specific branches.
 
-Members: Registered library patrons.
+* Members: Registered library patrons.
 
-Books: Inventory details including ISBN, category, rental price, and status.
+* Books: Inventory details including ISBN, category, rental price, and status.
 
-Issued_Status: Tracks books currently checked out by members.
+* Issued_Status: Tracks books currently checked out by members.
 
-Return_Status: Records returned books and links back to issuance records.
+* Return_Status: Records returned books and links back to issuance records.
