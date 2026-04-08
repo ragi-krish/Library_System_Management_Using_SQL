@@ -11,6 +11,8 @@ The system consists of the following relational tables:
 * Issued_Status: Tracks books currently checked out by members.
 * Return_Status: Records returned books and links back to issuance records.
 
+  ![Alt Text](https://github.com/ragi-krish/Library_System_Management_Using_SQL/blob/main/erd.png)
+
 ## 🛠️ Key Features & SQL Techniques
 1. Database Implementation (DDL)
 2. Analytical Queries & CRUD
