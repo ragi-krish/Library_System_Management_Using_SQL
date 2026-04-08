@@ -196,9 +196,7 @@ left join return_status as r
 on i.issued_id = r.issued_id
 where return_id is NULL;
 ```
-#### Identify Members with Overdue Books
-#####  Write a query to identify members who have overdue books (assume a 30-day return period). 
---Display the member's_id, member's name, book title, issue date, and days overdue.
+#### Identify Members with Overdue Books: Write a query to identify members who have overdue books (assume a 30-day return period). Display the member's_id, member's name, book title, issue date, and days overdue.
 
 
 
