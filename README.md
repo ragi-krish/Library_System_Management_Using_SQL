@@ -170,3 +170,35 @@ books as b on
 i.issued_book_isbn = b.isbn
 group by category;
 ```
+#### List Employees with Their Branch Manager's Name and their branch details
+```sql
+select e.emp_id,e.emp_name,
+b.* ,
+e2.emp_name as manager_name
+from employee as e
+right join branch as b
+on b.branch_id = e.branch_id
+join employee as e2
+on b.manager_id = e2.emp_id;
+```
+#### Create a Table of Books with Rental Price Above a Certain Threshold
+```sql
+create table expensive_books as 
+select isbn,book_title,rental_price
+from books where rental_price >6;
+```
+#### Retrieve the List of Books Not Yet Returned
+```sql
+select i.issued_book_name, i.issued_date,
+r.return_date
+from issued_status as i
+left join return_status as r
+on i.issued_id = r.issued_id
+where return_id is NULL;
+```
+#### Identify Members with Overdue Books
+#####  Write a query to identify members who have overdue books (assume a 30-day return period). 
+--Display the member's_id, member's name, book title, issue date, and days overdue.
+
+
+
