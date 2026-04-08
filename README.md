@@ -118,3 +118,55 @@ UPDATE members
 SET member_address = '125 Oak St'
 WHERE member_id = 'C103';
 ```
+#### Delete a Record from the Issued Status Table
+```sql
+DELETE FROM issued_status
+WHERE  issued_id =   'IS121';
+```
+#### List Members Who Registered in the Last 180 Days
+```sql
+select member_id from members
+where reg_date >= current_date - interval '180 days';
+```
+#### Retrieve All Books in a Specific Category
+```sql
+SELECT * FROM books WHERE category = 'Classic';
+```
+#### Create a summary table of books and no: of times issued
+```sql
+create table book_issued_count as 
+select isbn, book_title,count(issued_book_isbn) as issued_count 
+from books as b 
+left join issued_status as i 
+on b.isbn = i.issued_book_isbn 
+group by b.isbn,b.book_title;
+```
+#### find no: of books in each category
+```sql
+select count(isbn), category from books
+group by category;
+```
+#### Find Total Rental Income by book
+```sql
+select 
+issued_book_name,
+issued_book_isbn,
+rental_price,
+count(issued_id) as no_of_times_issued,
+count(issued_id)*rental_price as total_rent
+from issued_status as i join 
+books as b on 
+i.issued_book_isbn = b.isbn
+group by issued_book_name,issued_book_isbn,rental_price;
+```
+#### Find Total Rental Income by Category
+```sql
+select 
+category,
+count(issued_id) as no_of_times_issued,
+sum(rental_price)
+from issued_status as i join 
+books as b on 
+i.issued_book_isbn = b.isbn
+group by category;
+```
