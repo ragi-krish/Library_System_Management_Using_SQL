@@ -1,7 +1,7 @@
 # Library_System_Management_Using_SQL
 A comprehensive SQL-based library management system demonstrating data modeling, CRUD operations, advanced joins, and automation via stored procedures.
 
-# 📊 Database Schema
+## 📊 Database Schema
 The system consists of the following relational tables:
 
 Branch: Information about library branches and their managers.
