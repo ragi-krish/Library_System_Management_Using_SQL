@@ -341,4 +341,4 @@ select * from fine_table;
 * Data Analysis: Insights into book categories, employee salaries, member registration trends, and issued books.
 * Summary Reports: Aggregated data on high-demand books and employee performance.
 ## 🏁 Conclusion
-This Library Management System project successfully demonstrates the transition from raw data to a functional, automated relational database. By implementing this system, I have addressed several core challenges in data m.anagement such as Integrity & Consistency,Operational Efficiency, Data-Driven Insights,Proactive Management.
+This Library Management System project successfully demonstrates the transition from raw data to a functional, automated relational database. By implementing this system, I addressed core challenges in data management by ensuring data accuracy through integrity constraints, developing stored procedures to automate repetitive tasks, and leveraging complex SQL joins and aggregations to generate actionable business reports.
