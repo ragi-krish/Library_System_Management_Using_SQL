@@ -3,8 +3,8 @@ A comprehensive SQL-based library management system demonstrating data modeling,
 
 ## 📊 Database Schema
 The system consists of the following relational tables:
-UNORDERED LIST
-Branch: Information about library branches and their managers.
+
+⋅⋅⋅⋅*Branch: Information about library branches and their managers.
 
 Employee: Staff details associated with specific branches.
 
